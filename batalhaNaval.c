@@ -1,26 +1,31 @@
 #include <stdio.h>
 
-int main() {
-    int tabuleiro[10][10];
+#define TABULEIRO_TAMANHO 10
 
-    // Inicializa o tabuleiro com 0 (água)
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
-            tabuleiro[i][j] = 0;
-        }
-    }
+int main(){
+    //Matriz de 10x10 do tabuleiro
+    int tabuleiro[TABULEIRO_TAMANHO][TABULEIRO_TAMANHO] = {0};
 
-    // Posiciona navio horizontal (tamanho 3) a partir da posição (1, 2)
+    //Posição do navio 1 (Horizontal)
     tabuleiro[1][2] = 3;
-    tabuleiro[1][3] = 3;
-    tabuleiro[1][4] = 3;
+    tabuleiro[2][2] = 3;
+    tabuleiro[3][2] = 3;
 
-    // Posiciona navio vertical (tamanho 3) a partir da posição (4, 5)
-    tabuleiro[4][5] = 3;
-    tabuleiro[5][5] = 3;
-    tabuleiro[6][5] = 3;
+    //Posição do navio 2 (Vertical)
+    tabuleiro[4][7] = 3;
+    tabuleiro[4][8] = 3;
+    tabuleiro[4][9] = 3;
 
-    // Exibe o tabuleiro
+    //Posição do navio 3 (Diagonal)
+    tabuleiro[7][5] = 3;
+    tabuleiro[8][4] = 3;
+    tabuleiro[9][3] = 3;
+
+    //Posicação do navio 4 (Diagonal)
+    tabuleiro[5][1] = 3;
+    tabuleiro[6][2] = 3;
+    tabuleiro[7][3] = 3;
+
     printf("=== Tabuleiro ===\n");
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
